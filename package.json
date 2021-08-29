@@ -1,0 +1,26 @@
+{
+    "name": "ioc-starter",
+    "version": "1.0.0",
+    "description": "the starter package for creating an ioc challenge",
+    "main": "app.js",
+    "type": "module",
+    "scripts": {
+        "start": "node .",
+        "postinstall": "npx"
+    },
+    "bin": "bin/app.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/MicroClub-USTHB/ioc-starter.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/MicroClub-USTHB/ioc-starter/issues"
+    },
+    "homepage": "https://github.com/MicroClub-USTHB/ioc-starter#readme",
+    "dependencies": {
+        "@microclub-usthb/ioc-challenge": "^1.0.1"
+    }
+}
