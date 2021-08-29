@@ -5,10 +5,8 @@
     "main": "app.js",
     "type": "module",
     "scripts": {
-        "start": "node .",
-        "postinstall": "npx"
+        "start": "node ."
     },
-    "bin": "bin/app.js",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/MicroClub-USTHB/ioc-starter.git"
@@ -21,6 +19,6 @@
     },
     "homepage": "https://github.com/MicroClub-USTHB/ioc-starter#readme",
     "dependencies": {
-        "@microclub-usthb/ioc-challenge": "^1.0.1"
+        "impact-of-code": "^1.0.2"
     }
 }

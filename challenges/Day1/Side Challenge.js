@@ -1,4 +1,4 @@
-import Challenge from "@microclub-usthb/ioc-challenge";
+import Challenge from "impact-of-code";
 
 class SideChallenge1 extends Challenge {
     InputGenerator(InputsNum) {
