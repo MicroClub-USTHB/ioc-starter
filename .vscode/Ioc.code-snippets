@@ -20,5 +20,13 @@
 			"export default $0;"
 		],
 		"description": "Create a challenge from the Ioc template"
+	},
+	"ioc-class": {
+		"scope": "javascript,typescript",
+		"prefix": "ioc-class",
+		"body": [
+			"const challenge=GetChallenge(${1:1},${2:true});"
+		],
+		"description": "Create a challenge from the Ioc template"
 	}
 }

@@ -7,14 +7,18 @@ export default function () {
         side = [];
     for (let i = 1; i <= DaysNumber; i++) {
         main.push(
-            import(`./challenges/Day${i}/${MainName}.js`).catch(() => {
-                throw new NoChallenge(`Main Challenge${i}`);
-            })
+            import(`./challenges/Day${i}/${MainName}.js`)
+                .then((IoClass) => IoClass.default)
+                .catch(() => {
+                    throw new NoChallenge(`Main Challenge${i}`);
+                })
         );
         side.push(
-            import(`./challenges/Day${i}/${SideName}.js`).catch(() => {
-                throw new NoChallenge(`Side Challenge${i}`);
-            })
+            import(`./challenges/Day${i}/${SideName}.js`)
+                .then((IoClass) => IoClass.default)
+                .catch(() => {
+                    throw new NoChallenge(`Side Challenge${i}`);
+                })
         );
     }
     return Promise.all([Promise.all(main), Promise.all(side)])
@@ -22,5 +26,8 @@ export default function () {
             plugChallenges({ main, side });
             return true;
         })
-        .catch(() => false);
+        .catch((e) => {
+            console.error(e);
+            return false;
+        });
 }
